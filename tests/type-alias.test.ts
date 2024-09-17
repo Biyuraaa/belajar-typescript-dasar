@@ -5,6 +5,7 @@ describe("Test Type Alias", () => {
     const makanan: Category = {
       id: 1,
       name: "Makanan",
+      description: "Gaada",
     };
 
     const pecel_lele: Product = {
