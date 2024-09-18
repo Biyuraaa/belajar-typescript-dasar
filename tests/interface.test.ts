@@ -72,4 +72,22 @@ describe("Test Interface", () => {
 
     expect(person.sayHello("Bimo")).toBe("Hello Bimo");
   });
+
+  it("should support intersection types in interface", () => {
+    interface HasName {
+      name: string;
+    }
+    interface HasId {
+      id: string;
+    }
+
+    type Person = HasName & HasId;
+
+    const bimo: Person = {
+      name: "M Bimo Bayu Bagaskara",
+      id: "bimo",
+    };
+
+    expect(bimo.name).toBe("M Bimo Bayu Bagaskara");
+  });
 });
