@@ -1,4 +1,5 @@
 import { Mahasiswa, JK } from "../src/mahasiswa";
+import { Person } from "../src/person";
 
 describe("Test Interface", () => {
   it("should support interface", () => {
@@ -59,5 +60,16 @@ describe("Test Interface", () => {
     };
 
     expect(bimo2["nim"]).toBe("187221049");
+  });
+
+  it("should support function in interface", () => {
+    const person: Person = {
+      name: "M Bimo Bayu Bagaskara",
+      sayHello: function (name: string): string {
+        return `Hello ${name}`;
+      },
+    };
+
+    expect(person.sayHello("Bimo")).toBe("Hello Bimo");
   });
 });
